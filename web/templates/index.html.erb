@@ -42,10 +42,11 @@
  	<ul class="list-group">
 
 	<% files.each do |f| %>
-	  <% program_title = filename = f %>
-	  <% date = '' %>
+
+	  <% filename = rm_extension(f) %>
+
 	  <li class="list-group-item">
-            <p> <strong><%= program_title %> </strong> <small><%= date %> </small></p>
+            <p> <strong><%= program_title f %> </strong> <small>fecha: <%= time_from(f).strftime('%d-%m-%Y') %> </small></p>
 	    
 	    <audio controls="controls">  
 	      <source src="programas-grabados/<%= filename %>.ogg" type="audio/ogg" /> 
