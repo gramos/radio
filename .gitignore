@@ -1,3 +1,6 @@
 *~
 web/index.html
 web/programas-grabados/*
+backup/*.mp3
+backup/*.ogg
+log/*.log
