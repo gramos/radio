@@ -3,7 +3,7 @@ require 'date'
 program_name = ARGV[0]
 time         = DateTime.now.to_s.tr(":","")
 filename     = "#{program_name}_#{time}"
-rec_cmd      = "rec -r 44100 -C 48.01 -c 2 #{filename}.mp3 trim 0 00:00:05"
+rec_cmd      = "rec -r 44100 -C 48.01 -c 2 #{filename}.mp3 trim 0 02:10:00"
 
 def mp3_to_ogg(filename)
   "mpg321 #{filename}.mp3 -w raw && oggenc raw -o #{filename}.ogg"
