@@ -17,5 +17,6 @@ end
 puts "==> [ record ] #{filename}..."
 system rec_cmd
 system mp3_to_ogg filename
+system "rm raw"
 system "mv #{filename}.mp3 web/programas-grabados/"
 system "mv #{filename}.ogg web/programas-grabados/"
